@@ -13,14 +13,10 @@ $$
 	\rho = \frac{|E|}{\frac12 n(n-1)},
 $$
 where $|E|$ is the number of edges and where the factor of $\frac12$ comes from the fact that the edges are undirected so $e_{ij}=e_{ji}$. 
-
 The \emph{degree} of a node in a network, often denoted $k$ or $k_i$ for the degree of node $i$ is the number of edges that connect to that node. In the case of a directed network we have both \emph{in-degree} and \emph{out-degree}, the number of incoming and outgoing links, respectively.
-
 The \emph{component} of a graph to which a vertex belongs is the set of vertices that can be reached from it by paths running along the edges of the graph. A node in a directed graph has both an \emph{in-component} and an \emph{out-component} corresponding to the nodes that it can be reached from and the nodes that can be reached from it. A graph need not consist of only a single component, though some properties are ambiguously defined when it does not.
-
 The \emph{geodesic path} between a pair of nodes is the shortest path through the network that connects them. The shortest path need not be unique and for a directed network the shortest path can differ depending on direction.
 It is sometimes interesting to look at the \emph{average shortest path} for a graph. That is the average over all possible shortest paths in the graph, computed for each pair of nodes. 
-
 The notation $e_{ij}$ for the edges of a network suggests that we can represent a network as a matrix. If we let the rows and columns of the matrix represent the vertices of the network, then the non-zero entries of the matrix represent edges between pairs of vertices. We call such a network the \emph{adjacency matrix} of the graph. The values of the non-zero entries can be used to denote \emph{edge weights} of a \emph{weighted graph}.
 
 Many real-world networks consist of nodes of different types, with connection only between nodes of certain types. The simplest example of this is a \emph{bipartite network} (also known as a \emph{two-mode network}): a network of two types of vertices $V=\{v_i\}$ and $U=\{u_j\}$ where the edges only connect nodes of type $v$ to nodes of type $u$. For example, a publication network where $V$ represents authors and $U$ their publications.  (More generally, the two node types are often referred to as agents and artifacts.) Edges link authors to their publications but not publications to publications, nor authors to authors. In order to obtain a co-authorship network from this publication network it would be necessary to calculate the \emph{unipartite} or \emph{one-mode projection} of the bipartite network.
@@ -31,15 +27,9 @@ Many real-world networks consist of nodes of different types, with connection on
 {\bf Social networks:} 
 
 A social network is a set of people or groups with some pattern of contacts or interactions between them. They include such diverse examples as friendship networks of dolphins and interactions between characters in works of fiction, through to more traditional networks such as friendships between individuals, either in real life, or on Facebook, employment networks, and business relationships between companies.
-
 Some of these networks, like the business relationships are best viewed as undirected networks, while others, like real-life friendship networks are directed. Friendship networks lend their name to an interesting feature of networks: the so called \emph{friendship paradox} which states that your friends will typically have more friends than you do. This arises from the fact that like many other real-world networks, friendship networks have a heavy-tailed degree distribution so picking a random node and following an edge from it is likely to lead you to a node with higher degree than the starting node.
-
 \emph{Contact networks} are one important example of social networks. These are networks of when people are in close enough proximity to allow for a disease to spread between them. (Close enough obviously depends on the type of disease.) Contact networks play an important role in modeling of disease contagion --- for example the recent Ebola outbreak in West Africa was successfully modeled using contact networks and this played an important role in managing the epidemic. See also: COVID-19
-
-
-
 {\bf Information networks:}
-
 These could equally be called knowledge networks. Examples include the publication networks mentioned earlier (bipartite, undirected), citation networks (directed) whether as citations of publications or of patents, and the World Wide Web (directed). (Note --- the WWW should not be confused with the internet; one is a collection of electronic documents that can link to one another, the other is a collection of computers and switches connected by cables.) Preference networks are another example of information networks that are often used in real-world applications. Examples include networks of people linked to their Netflix viewings, or their Amazon purchases. Identifying patterns in such networks and predicting likely new links is a highly active area of both academic and commercial interest.
 
 
